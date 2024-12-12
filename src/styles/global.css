@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+
+  /* app.jsx */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* calandar.jsx */
+  .button{
+    display: flex;
+    justify-content: space-between;
+  }
+  button {
+    cursor: pointer;
+    padding: 8px;
+    font-size: 18px;
+    
+  }
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  } 
+  .month{
+    text-align: center;
+  } 
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columns for days of the week */
+    gap: 10px; /* Space between grid items */
+    padding: 10px;
+  }
+  .day{
+    margin: 10px;
+    padding: 8px;
+    
+    font-size: 36px;
+    font-weight: bold;
+    border: 1px solid gray;
+    border-radius: 3px;
+    text-align: center;
+
+  }
+  .day:hover{
+    cursor: pointer;
+    background-color: rgb(236, 232, 232);
+  }
+  .date-day{
+    font-size: 18px;
+  }
+
+  /* event.jsx */
+  .event-list {
+    flex: 1;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .event{
+    font-size: 17px;
+    font-weight: 600;
+  }
